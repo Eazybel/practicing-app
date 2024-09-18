@@ -1,12 +1,27 @@
-let word1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur "
-let longer=function(word1){
-    let converted=word1.split(" ")
-    let final=""
-    for (let i = 0; i < converted.length; i++) {
-       if (converted[i].length>final.length) {
-        final=converted[i];
-       } 
+
+  function togglePopup() {
+    var popup = document.getElementById('popup');
+    if (popup.style.display === 'none') {
+      popup.style.display = 'block';
+    } else {
+      popup.style.display = 'none';
     }
-    console.log(final)
-}
-longer(word1);
+  }
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+  

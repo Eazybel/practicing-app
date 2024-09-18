@@ -1,3 +1,41 @@
-body{
-    background-color: bisque;
-}
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px; /* Increased padding */
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 30px; /* Increased border-radius */
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Increased gap */
+    justify-items: center;
+  }
+
+  /* Button styling */
+  .popup-button {
+    padding: 25px 50px; /* Increased padding */
+    font-size: 24px; /* Increased font size */
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Added margin at the bottom */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .popup {
+      padding: 30px; /* Adjusted padding for smaller screens */
+    }
+    
+    .popup-button {
+      padding: 20px 40px; /* Adjusted padding for smaller screens */
+      font-size: 20px; /* Adjusted font size for smaller screens */
+      margin-bottom: 15px; /* Adjusted margin for smaller screens */
+    }
+  }
